@@ -19,7 +19,11 @@ let first = 50,
 
 let answer = first + second;
 
-cosnole.log(answer);
+console.log(answer);
 
+// Single line comments
 
-
+/* 
+    Multi
+    line
+    Comments  */
