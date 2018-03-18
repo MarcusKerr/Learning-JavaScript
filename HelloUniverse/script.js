@@ -31,11 +31,11 @@ console.log(answer);
 
 //Data types
 
-// Strings
+//strings
 let myFirstName = "Marcus";
 console.log(myFirstName, typeof(myFirstName));
 
-//Numbers
+//numbers
 let myAge = 24;
 console.log(myAge, typeof(myAge));
 
@@ -52,3 +52,11 @@ console.log(future, typeof(future));
 //null
 let failure = null;
 console.log(failure, typeof(failure));
+
+//array
+let myNameArray = ["Marcus", "Anthony", "Kerr"];
+console.log(myNameArray[0]);
+console.log(myNameArray[1]);
+console.log(myNameArray[2]);
+console.log(myNameArray[3]);
+console.log(myNameArray, typeof(myNameArray));
