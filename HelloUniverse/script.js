@@ -55,8 +55,12 @@ console.log(failure, typeof(failure));
 
 //array
 let myNameArray = ["Marcus", "Anthony", "Kerr"];
+
+//looking up array values 
 console.log(myNameArray[0]);
 console.log(myNameArray[1]);
 console.log(myNameArray[2]);
 console.log(myNameArray[3]);
+
+//aray type
 console.log(myNameArray, typeof(myNameArray));
