@@ -27,3 +27,28 @@ console.log(answer);
     Multi
     line
     Comments  */
+
+
+//Data types
+
+// Strings
+let myFirstName = "Marcus";
+console.log(myFirstName, typeof(myFirstName));
+
+//Numbers
+let myAge = 24;
+console.log(myAge, typeof(myAge));
+
+//Booleans
+let yes = true;
+let no = false;
+console.log(yes, typeof(yes));
+console.log(no, typeof(no));
+
+//undeffined
+let future;
+console.log(future, typeof(future));
+
+//null
+let failure = null;
+console.log(failure, typeof(failure));
