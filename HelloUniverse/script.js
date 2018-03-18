@@ -94,3 +94,36 @@ let removedList = numbersArray.splice(1,4,numbersToAdd[0], numbersToAdd[1], numb
 console.log(removedList + " were removed from the array");
 console.log(numbersToAdd + " were added to the array");
 console.log(numbersArray);
+
+
+//if statememnts
+let score = 1000;
+
+if (score >  1000){
+    score += 101;
+    console.log("The score is " +score);
+}
+else if (score === 1000){
+    console.log("Almost bonus"); 
+}
+else{
+    console.log("No Bonus");
+}
+
+//switch case statement
+ let city = "Ldn";
+
+ switch(city){
+     case "Lei":
+        console.log("Leicester");
+        break;
+    case "Liv":
+        console.log("Liverpool");
+        break; 
+     case "Ldn":
+        console.log("London");
+        break;
+     default:
+        console.log("City Unknown");
+        break;
+ }
