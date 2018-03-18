@@ -3,9 +3,15 @@
     Marcus Kerr
 */
 
-// Card variable 
-let card1 = "Ace of Spades",
-    card2 = "Ten of Hearts";
+//cards array
+let deck = ["Ace of Spades",
+            "Two of Spades",
+            "Three of Spades"
+    ];
+
+//players can have two or more cards so best to use an array 
+let playerCards = [deck[0], deck[2]];
+ 
 
 //print cards to console
-console.log("Game start, you were dealt:\n\t\t\t" + card1 + "\n\t\t\t" + card2);
+console.log("Game start,\nYou were dealt:\n\t\t\t" + playerCards[0] + "\n\t\t\t" + playerCards[1]);
