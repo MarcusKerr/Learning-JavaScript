@@ -64,3 +64,33 @@ console.log(myNameArray[3]);
 
 //aray type
 console.log(myNameArray, typeof(myNameArray));
+
+//Array features
+let numbersArray = [1,2,3,4,5];
+
+console.log(numbersArray);
+
+//length of the array
+console.log(numbersArray.length);
+
+//add numbers to the array
+numbersArray.push(7);
+console.log(numbersArray);
+
+//remove vales from end of the array
+let removedLast = numbersArray.pop();
+console.log(removedLast + " was removed form the end of the array");
+console.log(numbersArray);
+
+
+//removes first value in array
+let removedFirst = numbersArray.shift();
+console.log(removedFirst + " was removed from the start of the array");
+console.log(numbersArray);
+
+//removes multiple values from array, betwene start point and end point, pushes numbers
+let numbersToAdd = [12,13,14]
+let removedList = numbersArray.splice(1,4,numbersToAdd[0], numbersToAdd[1], numbersToAdd[2]);
+console.log(removedList + " were removed from the array");
+console.log(numbersToAdd + " were added to the array");
+console.log(numbersArray);
