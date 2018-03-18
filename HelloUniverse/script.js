@@ -127,3 +127,14 @@ else{
         console.log("City Unknown");
         break;
  }
+
+ //for loop
+ /*
+    after for keyword within the parentheses:
+    1. control variable initialisation and counter
+    2. condition
+    3. control manipulation 
+*/
+ for (let i=0; i<=5; i++){
+     console.log("i is equal to " + i);
+ }
