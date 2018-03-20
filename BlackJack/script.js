@@ -13,16 +13,30 @@ let values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Quee
 let deck = [];
 
 //for loop to create deck of cards
-for(suitIdx = 0; suitIdx<suits.length; suitIdx++){
 
-    //Nested for loop to loop through values
+//loop through each suit
+/*for(suitIdx = 0; suitIdx<suits.length; suitIdx++){
+
+    //For each suit, loop through each value
     for(valuesIdx = 0; valuesIdx<values.length; valuesIdx++){
          
-        //add cards to deck array
+        //add card (combination of suit and value) to deck array
         deck.push(values[valuesIdx] + " of " + suits[suitIdx]);
     }
-}
+}*/
 
+
+//While loop equivalent of for loop
+suitIdx = 0
+while (suitIdx<suits.length){
+
+    valuesIdx = 0;
+    while (valuesIdx<values.length){
+        deck.push(values[valuesIdx] + " ox " + suits[suitIdx]);
+        valuesIdx ++;
+    }
+    suitIdx ++
+}
 //for loop to check that deck was created
 for(i=0; i<deck.length; i++){
     console.log(deck[i]);
