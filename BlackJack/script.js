@@ -7,7 +7,25 @@
 let suits = ['Spades', 'Diamonds', 'Hearts', 'Clubs'];
 
 //card values array 
-let values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']; 
+let values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
+
+//elements from the webpage
+let textArea = document.getElementById('text-area');
+let newGameButton = document.getElementById('new-game-button');
+let hitButton  = document.getElementById('hit-button');
+let stayButton = document.getElementById('stay-button');
+
+//at the start of the game hit and stay button hidden
+hitButton.style.display = 'none';
+stayButton.style.display = 'none';
+
+//ewvent handler for new game button
+newGameButton.addEventListener('click',function(){
+    textArea.innerText = 'Game Begin...'
+    newGameButton.style.display = 'none';
+    hitButton.style.display = 'inline';
+    stayButton.style.display = 'inline';
+}); 
 
 //function to create deck of cards
 function createDeck () {
