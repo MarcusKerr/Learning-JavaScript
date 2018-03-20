@@ -147,3 +147,38 @@ else{
      console.log(count);
      count ++;
  }
+
+
+ //functions
+
+ //declare function
+ function myFirstFunction (){
+     console.log("This is my first function");
+ }
+
+ //call function
+ myFirstFunction ();
+
+ //function with single arg(ument
+ function unoArgument (uno){
+    console.log(uno);
+ }
+
+ unoArgument('A single argument');
+
+//funtion with multiple arguments
+function tresArguments (uno, dos, tres){
+    console.log(uno,dos,tres);
+}
+
+tresArguments('one','two','three');
+
+//function return
+function favNumber(number){
+    let newNumber = number + 1000;
+    return newNumber; 
+}
+
+result = favNumber(619);
+console.log(result);
+
