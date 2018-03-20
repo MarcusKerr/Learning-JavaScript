@@ -182,3 +182,60 @@ function favNumber(number){
 result = favNumber(619);
 console.log(result);
 
+
+//Objects
+
+//creating first onject
+let person = {
+    name: "Waka Flocka",
+    age: 31,
+    genre: "Rap"
+};
+
+//dot notation to access property
+console.log(person.name, person.age);
+
+//array containing multiple objects
+let people  = [
+    {
+        name: "Gucci Mane",
+        age: 38
+        
+    },
+    {
+        name: "Kung Fu Kenny",
+        age: 30
+    }
+];
+
+//To access a propert of an object in an array combine subscripting with dot notation
+console.log(people[0].name);
+
+
+//Math object 
+//calling random function from math object 
+let randResult = Math.random() * 500;
+
+//remove all values after decimal point
+randResult = Math.trunc(randResult);
+
+console.log(randResult); 
+
+//Date objeect
+//create a new date object
+let newDay = new Date();
+
+console.log(newDay);
+
+//newdatestring function from date object
+let simpleNewDay = new Date().toDateString();
+
+console.log(simpleNewDay);
+
+//String objects
+//strings are objects and have many methods
+let stringyString = "yes no";
+stringyString = stringyString.toLocaleUpperCase();
+console.log(stringyString);
+
+//Numbers
