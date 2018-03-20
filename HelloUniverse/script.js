@@ -238,4 +238,9 @@ let stringyString = "yes no";
 stringyString = stringyString.toLocaleUpperCase();
 console.log(stringyString);
 
-//Numbers
+
+
+//Manipulating data on webpages 
+//select element via id
+let paragraph = document.getElementById('text');
+paragraph.innerText = 'Woop woop!';
