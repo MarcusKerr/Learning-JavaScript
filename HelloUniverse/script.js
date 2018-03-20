@@ -244,3 +244,19 @@ console.log(stringyString);
 //select element via id
 let paragraph = document.getElementById('text');
 paragraph.innerText = 'Woop woop!';
+
+//button click event
+button = document.getElementById('button');
+
+/*  add event listener funtion takes two arguments
+    First, event we are listening for
+    Second, function to call when event fires
+*/
+
+button.addEventListener('click', function (){
+    paragraph.innerText = "Button Clicked";
+
+    // make button diossappear when clicked
+    button.style.display = 'none';
+    
+})
