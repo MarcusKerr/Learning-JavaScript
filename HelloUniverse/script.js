@@ -138,3 +138,6 @@ else{
  for (let i=0; i<=5; i++){
      console.log("i is equal to " + i);
  }
+
+ //while loop
+ 
