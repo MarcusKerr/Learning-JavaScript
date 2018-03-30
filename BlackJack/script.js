@@ -31,7 +31,7 @@ hitButton.style.display = 'none';
 stayButton.style.display = 'none';
 showStatus();
 
-//ewvent handler for new game button
+//event handler for new game button
 newGameButton.addEventListener('click',function(){
    gameStarted = true;
    gameOver = false;
@@ -120,7 +120,7 @@ function getCardNumericValue(card){
 function getScore(cardArray){
     let score = 0;
     let hasAce = false;
-    for (let i = 0; i < cardArray; i++){
+    for (let i = 0; i < cardArray.length; i++){
         let card = cardArray[i];
         score += getCardNumericValue(card);
         if (card.value === 'Ace' ){
