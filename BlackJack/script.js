@@ -46,7 +46,19 @@ newGameButton.addEventListener('click',function(){
    hitButton.style.display='inline';
    stayButton.style.display='inline';
    showStatus();
-}); 
+});
+
+hitButton.addEventListener('click',function(){
+    playerCards.push(getNextCard());
+    checkForEndOfGame();
+    showStatus();
+});
+
+stayButton.addEventListener('click',function(){
+    gameOver = true;
+    checkForEndOfGame();
+    showStatus();
+});
 
 //function to create deck of cards
 function createDeck () {
@@ -139,6 +151,41 @@ function updateScores(){
     playerScore = getScore(playerCards); 
 }
 
+//check for the end of the game
+function checkForEndOfGame(){
+    updateScores();
+
+    //check if the game is over
+    if (gameOver) {
+
+        //if the game is over give dealer chance to take cards
+        while (dealerScore < playerScore
+                && playerScore <= 21
+                && dealerScore <= 21){
+            dealerCards.push(getNextCard());
+            updateScores();
+        }
+    }
+
+    if (playerScore > 21){
+        playerWon = false;
+        gameOver = true;
+    }
+    else if (dealerScore > 21){
+        playerWon = true;
+        gameOver = true;
+    }
+    else if (gameOver){
+        if (playerScore > dealerScore){
+            playerWon = true;
+        }
+        else {
+            playerWon = false;
+        }
+    }
+};
+
+
 function showStatus(){
     if (!gameStarted){
         textArea.innerText = "Blackjack X";
@@ -184,8 +231,6 @@ function showStatus(){
 function getNextCard(){
     return deck.shift();
 }
-
-
 
 
 //Call deck function to create deck of cards 
