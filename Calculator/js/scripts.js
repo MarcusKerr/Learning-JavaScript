@@ -1,11 +1,10 @@
-//press seven display seven
-
 //Get display area, this is each button press will be displayed
 let displayArea = document.getElementById("displayArea");
 
-//Get the numbers and operators from the calculator
+//Get all buttons from the calculator
 let button = document.getElementsByTagName("button");
 
+//Store operators in array
 let operators = document.getElementsByClassName("operator");
 
 /*  Number user is currently entering
@@ -51,9 +50,11 @@ for (let i = 0; i < button.length; i++) {
                 /*  Set current operator
                     Add all to expression 
                 */
-
                 currentOperator = this.innerHTML;
                 addToExpression(currentOperator);
+                break;
+            case "equals":
+                evaluate(expression);
                 break;
         }
     });
@@ -72,13 +73,13 @@ function inputNumber(digitButton) {
     Add operand to expression 
 */
 function addToExpression(operatorButton) {
-
-    //If expression is empty add a leading zero
-    if(expression.length == 0){
-        expression.push(0);
+    //If expression and current number are empty add a leading zero
+    if (expression.length == 0 && currentNumber.length == 0) {
+        expression.push("0");
+        expression.push(operatorButton);
     }
-    //If nothing in the current number array check if previously entered is a operator
-    if (currentNumber.length == 0) {
+    //If nothing current number empty check if previously entered is a operator
+    else if (currentNumber.length == 0) {
         /*  Check if the last element added to expression is an operator
         compare last elelemnt in expression against all operators
         */
@@ -89,7 +90,6 @@ function addToExpression(operatorButton) {
                 break;
             }
         }
-
         /*  If the last enelemnt in the expression is an operator
             replace it with current operator
         */
@@ -98,16 +98,25 @@ function addToExpression(operatorButton) {
         } else {
             expression.push(operatorButton);
         }
-    } else {
+    }
+    /*  If current number is not empty
+        add current number to expression 
+        followed by expression
+    */
+    else {
         expression.push(currentNumber);
         expression.push(operatorButton);
     }
-
-
     //clear
     currentNumber = [];
     currentOperator = "";
     console.log(expression);
+}
+
+//calculate
+function evaluate(expession){
+   // if last button pressed before equals was operaqnde remove from expression
+   //calculate result
 }
 
 // Clear
