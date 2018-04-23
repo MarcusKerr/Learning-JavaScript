@@ -2,7 +2,7 @@
     <html>
 
     <head>
-
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
     <body>
@@ -10,14 +10,14 @@
             <div id="displayArea"></div>
             <div id="Buttons">
                 <div class="buttonRow" id="row1">
-                    <button type="button" id="ac">AC</button>
+                    <button type="button" id="clear">C</button>
                     <button type="button">+/-</button>
                     <button type="button">%</button>
-                    <button type="button">/</button>
+                    <button type="button" class="operator">/</button>
                 </div>
 
                 <div class="buttonRow" id="row2">
-                    <button type="button" class="digit">7</button>
+                    <button type="button" class="digit" id="seven">7</button>
                     <button type="button" class="digit">8</button>
                     <button type="button" class="digit">9</button>
                     <button type="button" class="operator">*</button>
@@ -33,7 +33,7 @@
                 <div class="buttonRow" id="row4">
                     <button type="button" class="digit">1</button>
                     <button type="button" class="digit">2</button>
-                    <button type="button" class="digit">3</button>
+                    <button type="button" class="digit" id="three">3</button>
                     <button type="button" class="operator">+</button>
                 </div>
 
@@ -44,6 +44,7 @@
                 </div>
             </div>
         </div>
+        <script src="js/scripts.js"></script>
     </body>
 
     </html>
