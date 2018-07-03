@@ -13,7 +13,8 @@ let operators = document.getElementsByClassName("operator");
 let currentNumber = [],
     expression = [];
 
-let currentOperator = "";
+let currentOperator = "",
+    storedResult = "";
 
 //Initialise display area
 displayArea.innerHTML = 0;
@@ -113,10 +114,62 @@ function addToExpression(operatorButton) {
     console.log(expression);
 }
 
+function lastIsOp() {
+    let lastIsOp = false;
+    for (i = 0; i < operators.length; i++) {
+        if (expression[expression.length - 1] == operators[i].innerHTML) {
+            lastIsOp = true;
+            break;
+        }
+    }
+    return lastIsOp;
+}
+
 //calculate
-function evaluate(expession){
-   // if last button pressed before equals was operaqnde remove from expression
-   //calculate result
+function evaluate(expression) {
+
+    if (expression.length == 0 && currentNumber.length == 0) {
+        storedResult = "0";
+    } else if (expression.length == 0 && currentNumber.length != 0) {
+        storedResult = currentNumber;
+        expression.push(storedResult);
+        currentNumber = [];
+    } else if (expression.length == 1) {
+        expression[0] = currentNumber;
+        currentNumber = [];
+
+        // if (lastIsOp() == true) {
+        //     expression.pop();
+        // }
+    }
+
+    // else if (expression.length == 0 && currentNumber != []){
+    //     expession.push(currentNumber);
+    //     currentNumber = [];
+    // }
+
+
+    // if last button pressed before equals was operaqnd remove from expression
+    // if (lastIsOp() == true){
+    //     expression.pop();
+    // }
+    // else {
+    //     if (currentNumber.length !=0 ){
+    //         if (expession.length == 0){
+    //             expession.push(currentNumber);
+    //             currentNumber = [];
+    //         }
+    //         else{
+    //             expession[expession.length-1] = currentNumber;
+    //             currentNumber = [];
+    //         } 
+    //     }
+    // }
+
+    console.log(storedResult);
+
+    //calculate result
+
 }
 
 // Clear
